@@ -1,0 +1,2 @@
+- pipeline.id: trees
+  path.config: "/usr/share/logstash/pipeline/nycdata-pipe.conf"

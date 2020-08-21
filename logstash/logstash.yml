@@ -1,0 +1,9 @@
+node.name: log01
+
+pipeline.id: main
+
+#config.test_and_exit: true
+
+config.reload.automatic: true
+config.reload.interval: 5s
+
