@@ -16,7 +16,9 @@ Before using the docker-compose file, it's necessary to change the virtual memor
 
 ## Import Verification and Index Configuration via Kibana
 
-Once our containers are brought up, we can navigate to the index management page in Kibana to see our newly created index and verify it has the expected number of entries. ![We can see this assumption is true](/images/initial_index.png). Since this is a one-time import of static data, we'll create a new index pattern without a specified timestamp. After doing so, we can get a closer look at the logs from the 'Discover' tab in Kibana. This will give us a good idea for how our data is structured. ![](/images/nyctrees_discover.png). 
+Once our containers are brought up, we can navigate to the index management page in Kibana to see our newly created index and verify it has the expected number of entries. ![We can see this assumption is true](/images/initial_index.PNG) 
+
+Since this is a one-time import of static data, we'll create a new index pattern without a specified timestamp. After doing so, we can get a closer look at the logs from the 'Discover' tab in Kibana. This will give us a good idea for how our data is structured. ![](/images/discover_exploration.PNG). 
 
 Let's assume that we are asked to run these initial queries and create a visualization, after which no new data will be added. We will create a polciy for this index that will allow the data to stay in the "warm" phase for 30 days before migrating to the "cold" phase where it will be frozen. This will give us plenty of time to write our queries and build our dashboard before moving on. You can see how the ILM policy was configured [here](/kibana/ilm_policy.txt). This will move the data to a single container in our cluster, es03, that we've identified as "rack_two". 
 
