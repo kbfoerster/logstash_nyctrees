@@ -1,0 +1,34 @@
+GET trees/_search
+{
+  "size": 0, 
+  "_source": ["ntaname_full", "income"], 
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "term": {
+            "year.keyword": "2005"
+          }
+        }
+      ]
+    }
+  }, 
+  "aggs": {
+    "neighrborhoods": {
+      "terms": {
+        "field": "ntaname_full.keyword",
+        "order": {
+          "avg_income": "desc"
+        },
+        "size": 25
+      },
+      "aggs": {
+        "avg_income": {
+          "avg": {
+            "field": "income"
+          }
+        }
+      }
+    }
+  }
+}
