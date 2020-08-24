@@ -1,0 +1,30 @@
+GET trees/_search
+{
+  "size": 0,
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "term": {
+            "ntaname_full.keyword": "Bay Ridge"
+          }
+        },
+        {
+          "term": {
+            "healthstatus.keyword": "Good"
+          }
+        },
+        {
+          "term": {
+            "year.keyword": "2015"
+          }
+        },
+        {
+          "term": {
+            "genus.keyword": "quercus"
+          }
+        }
+      ]
+    }
+  }
+}

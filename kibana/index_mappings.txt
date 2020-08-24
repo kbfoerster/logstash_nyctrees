@@ -1,0 +1,197 @@
+PUT /nyctrees/_mapping
+{
+  "properties": {
+    "boro_ct": {
+      "type": "integer"
+    },
+    "borocode": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "boroname": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "cncldist": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "diversity": {
+      "type": "integer"
+    },
+    "education": {
+      "type": "integer"
+    },
+    "genus": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "healthstatus": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "host": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "income": {
+      "type": "integer"
+    },
+    "inf_guard": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "inf_shoes": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "laborforce": {
+      "type": "integer"
+    },
+    "latitude": {
+      "type": "integer"
+    },
+    "longitude": {
+      "type": "integer"
+    },
+    "nta": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "nta_name": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "ntaname_full": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "popDensity": {
+      "type": "integer"
+    },
+    "population": {
+      "type": "integer"
+    },
+    "poverty": {
+      "type": "integer"
+    },
+    "sidw_crack": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "species": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "st_assem": {
+      "type": "integer"
+    },
+    "st_senate": {
+      "type": "integer"
+    },
+    "tree_dbh": {
+      "type": "integer"
+    },
+    "unemployment": {
+      "type": "integer"
+    },
+    "x_sp": {
+      "type": "integer"
+    },
+    "y_sp": {
+      "type": "integer"
+    },
+    "year": {
+      "type": "integer",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "zip_city": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "zipcode": {
+      "type": "integer",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    }
+  }
+}
