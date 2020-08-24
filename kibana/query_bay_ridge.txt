@@ -26,5 +26,22 @@ GET trees/_search
         }
       ]
     }
+  },
+  "aggs": {
+    "tree_diameter": {
+      "stats": {
+        "field": "tree_dbh"
+      }
+    },
+    "species_count": {
+      "cardinality": {
+        "field": "species.keyword"
+      }
+    },
+    "species": {
+      "terms": {
+        "field": "species.keyword"
+      }
+    }
   }
 }
