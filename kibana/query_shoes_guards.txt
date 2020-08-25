@@ -1,0 +1,28 @@
+GET trees/_search
+{
+  "size": 0,
+  "_source": ["inf_guard","inf_shoes"],
+  "query": {
+    "bool": {
+      "must_not": [
+        {"term": {
+          "ntaname_full.keyword": {
+            "value": "Bay Ridge"
+          }
+        }}
+      ]
+    }
+  },
+  "aggs": {
+    "shoes": {
+      "terms": {
+        "field": "inf_shoes.keyword"
+      }
+    },
+    "guards":{
+      "terms": {
+        "field": "inf_guard.keyword"
+      }
+    }
+  }
+}
