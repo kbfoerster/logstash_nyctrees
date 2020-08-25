@@ -1,0 +1,40 @@
+{
+  "aggs": {
+    "2": {
+      "terms": {
+        "field": "inf_shoes.keyword",
+        "order": {
+          "_count": "desc"
+        },
+        "size": 5
+      }
+    }
+  },
+  "size": 0,
+  "stored_fields": [
+    "*"
+  ],
+  "script_fields": {},
+  "docvalue_fields": [],
+  "_source": {
+    "excludes": []
+  },
+  "query": {
+    "bool": {
+      "must": [],
+      "filter": [
+        {
+          "match_all": {}
+        }
+      ],
+      "should": [],
+      "must_not": [
+        {
+          "match_phrase": {
+            "ntaname_full.keyword": "Bay Ridge"
+          }
+        }
+      ]
+    }
+  }
+}

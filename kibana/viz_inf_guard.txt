@@ -1,0 +1,43 @@
+{
+  "aggs": {
+    "2": {
+      "terms": {
+        "field": "inf_guard.keyword",
+        "order": {
+          "_count": "desc"
+        },
+        "size": 5
+      }
+    }
+  },
+  "size": 0,
+  "stored_fields": [
+    "*"
+  ],
+  "script_fields": {},
+  "docvalue_fields": [],
+  "_source": {
+    "excludes": []
+  },
+  "query": {
+    "bool": {
+      "must": [],
+      "filter": [
+        {
+          "bool": {
+            "should": [
+              {
+                "match_phrase": {
+                  "ntaname_full.keyword": "Bay Ridge"
+                }
+              }
+            ],
+            "minimum_should_match": 1
+          }
+        }
+      ],
+      "should": [],
+      "must_not": []
+    }
+  }
+}

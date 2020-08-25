@@ -1,0 +1,121 @@
+{
+  "aggs": {
+    "2": {
+      "filters": {
+        "filters": {
+          "ntaname_full.keyword : \"Bay Ridge\" ": {
+            "bool": {
+              "must": [],
+              "filter": [
+                {
+                  "bool": {
+                    "should": [
+                      {
+                        "match_phrase": {
+                          "ntaname_full.keyword": "Bay Ridge"
+                        }
+                      }
+                    ],
+                    "minimum_should_match": 1
+                  }
+                }
+              ],
+              "should": [],
+              "must_not": []
+            }
+          }
+        }
+      },
+      "aggs": {
+        "3": {
+          "filters": {
+            "filters": {
+              "\"genus\": \"quercus\"": {
+                "bool": {
+                  "must": [],
+                  "filter": [
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "genus": "quercus"
+                            }
+                          }
+                        ],
+                        "minimum_should_match": 1
+                      }
+                    }
+                  ],
+                  "should": [],
+                  "must_not": []
+                }
+              }
+            }
+          },
+          "aggs": {
+            "4": {
+              "filters": {
+                "filters": {
+                  "\"year.keyword\": \"2015\"\n": {
+                    "bool": {
+                      "must": [],
+                      "filter": [
+                        {
+                          "bool": {
+                            "should": [
+                              {
+                                "match_phrase": {
+                                  "year.keyword": "2015"
+                                }
+                              }
+                            ],
+                            "minimum_should_match": 1
+                          }
+                        }
+                      ],
+                      "should": [],
+                      "must_not": []
+                    }
+                  }
+                }
+              },
+              "aggs": {
+                "5": {
+                  "terms": {
+                    "field": "species.keyword",
+                    "order": {
+                      "_count": "desc"
+                    },
+                    "size": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "size": 0,
+  "stored_fields": [
+    "*"
+  ],
+  "script_fields": {},
+  "docvalue_fields": [],
+  "_source": {
+    "excludes": []
+  },
+  "query": {
+    "bool": {
+      "must": [],
+      "filter": [
+        {
+          "match_all": {}
+        }
+      ],
+      "should": [],
+      "must_not": []
+    }
+  }
+}

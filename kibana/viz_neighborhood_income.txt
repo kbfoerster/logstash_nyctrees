@@ -1,0 +1,41 @@
+{
+  "aggs": {
+    "2": {
+      "terms": {
+        "field": "ntaname_full.keyword",
+        "order": {
+          "1": "desc"
+        },
+        "size": 25
+      },
+      "aggs": {
+        "1": {
+          "avg": {
+            "field": "income"
+          }
+        }
+      }
+    }
+  },
+  "size": 0,
+  "stored_fields": [
+    "*"
+  ],
+  "script_fields": {},
+  "docvalue_fields": [],
+  "_source": {
+    "excludes": []
+  },
+  "query": {
+    "bool": {
+      "must": [],
+      "filter": [
+        {
+          "match_all": {}
+        }
+      ],
+      "should": [],
+      "must_not": []
+    }
+  }
+}
