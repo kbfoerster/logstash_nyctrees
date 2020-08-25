@@ -51,7 +51,8 @@ Our next visualization will be based on our [second query](/kibana/query_neighbo
 Our final pair of visualizations will be for the inf_shoes and inf_guard attributes. This will be modeled after our [final query](/kibana/query_shoes_guards.txt). Since the values are binary, a pie chart would be a good way to visualize the proportion within the data. We'll create a filter for our data, then create the pie chart for the appropriate attributes. The request return for [inf_guard](/kibana/viz_inf_guard.txt) and [inf_shoes](/kibana/viz_inf_shoes.txt) are close to our query. 
 
 ![inf_guard for Neighborhoods other than Bay Ride](/images/viz_inf_guard.PNG) 
-![inf_shoes for Neighborhoods other than Bay Ride](/images/viz_shoes_guard.PNG) 
+
+![inf_shoes for Neighborhoods other than Bay Ride](/images/viz_inf_shoes.PNG) 
 
 ## Data Dashboard
 
