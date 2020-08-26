@@ -71,4 +71,7 @@ Throughout this project we briefly went over our logstash pipeline that pulled i
 For additional information into the NYCTrees database, please see my [other project](https://github.com/kbfoerster/nyctrees).  
 
 # References
+- Department of Parks and Recreation. (2016, June 2). 2005 Street Tree Census. Retrieved from https://data.cityofnewyork.us/Environment/2005-Street-Tree-Census/29bw-z7pj 
+
+- Department of Parks and Recreation. (2018, September 25). 2015 Street Tree Census - Tree Data. Retrieved from https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/pi5s-9p35 
 
